@@ -1,13 +1,7 @@
 [SYSTEM_ID: BGx]
-[STATUS: ONLINE]
+> Role: Sec_Researcher / Student
+> Status: Scanning Network...
+> Loc: Assam, IN
 
-# USER_PROFILE
-> Name: Devansh Agarwal
-> Class: 9th Grade // Student Ops
-> Role: Security Researcher & Dev
-
-# CURRENT_OBJECTIVE
-"Exploring the void between secure architecture and system vulnerability."
-
-[LINK_ESTABLISHED]
-[https://bgx-dev.vercel.app](https://bgx-dev.vercel.app)
+# ACCESS PORTFOLIO:
+https://bgx-dev.vercel.app
