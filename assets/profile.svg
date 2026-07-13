@@ -24,8 +24,8 @@
             .pill { fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.1); stroke-width: 1; rx: 6; }
             .pill-text { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px; fill: #aaa; font-weight: 500;}
             
-            .fade-in { animation: fadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
-            @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+            .fade-in { animation: fadeIn 1.5s ease-out forwards; opacity: 0; }
+            @keyframes fadeIn { to { opacity: 1; } }
         </style>
     </defs>
     
