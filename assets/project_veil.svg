@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" width="800" height="140">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#0c0d12" />
+            <stop offset="100%" stop-color="#14151c" />
+        </linearGradient>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap');
+            .title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 22px; fill: #ffffff; }
+            .desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 14px; fill: #a0a5b5; }
+            .tech-pill { fill: rgba(255, 255, 255, 0.05); stroke: rgba(255, 255, 255, 0.1); stroke-width: 1; rx: 10; }
+            .tech-text { font-family: 'Inter', sans-serif; font-weight: 400; font-size: 11px; fill: #d4d4d4; text-anchor: middle; }
+            .card { animation: fadeIn 1s ease-out forwards; opacity: 0; }
+            @keyframes fadeIn { to { opacity: 1; } }
+            .hover-box:hover .border { stroke: #4a90e2; }
+        </style>
+    </defs>
+
+    <g class="card hover-box">
+        <!-- Transparent outer bounds for neatness -->
+        <rect width="800" height="140" fill="transparent" />
+        
+        <!-- Main Card Body -->
+        <rect x="50" y="10" width="700" height="120" rx="8" fill="url(#bg)" stroke="#1f2029" stroke-width="1" class="border" style="transition: stroke 0.3s ease;" />
+        
+        <!-- Subtle accent line -->
+        <rect x="50" y="10" width="4" height="120" fill="#4a90e2" rx="2" />
+
+        <g transform="translate(80, 40)">
+            <text y="0" class="title">Veil Browser</text>
+            <text y="25" class="desc">Ultra-lightweight, privacy-hardened desktop browser</text>
+            <text y="45" class="desc">with Tor integration &amp; WebGPU-accelerated local AI.</text>
+            
+            <!-- Tech Stack -->
+            <g transform="translate(0, 65)">
+                <rect x="0" y="0" width="60" height="20" class="tech-pill" />
+                <text x="30" y="14" class="tech-text">Rust</text>
+                
+                <rect x="70" y="0" width="60" height="20" class="tech-pill" />
+                <text x="100" y="14" class="tech-text">Tauri</text>
+                
+                <rect x="140" y="0" width="70" height="20" class="tech-pill" />
+                <text x="175" y="14" class="tech-text">Next.js</text>
+                
+                <rect x="220" y="0" width="70" height="20" class="tech-pill" />
+                <text x="255" y="14" class="tech-text">WebGPU</text>
+            </g>
+        </g>
+        
+        <!-- Shield Icon Graphic -->
+        <g transform="translate(650, 40)" fill="none" stroke="#2d2e36" stroke-width="2">
+            <path d="M 25 0 L 50 10 L 50 35 C 50 55 25 70 25 70 C 25 70 0 55 0 35 L 0 10 Z" />
+            <circle cx="25" cy="30" r="8" />
+        </g>
+    </g>
+</svg>
