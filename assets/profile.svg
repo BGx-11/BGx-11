@@ -106,8 +106,8 @@
             
             <rect x="30" y="195" width="40" height="24" class="pill" />
             <text x="38" y="211" class="pill-text">Go</text>
-            <rect x="80" y="195" width="55" height="24" class="pill" />
-            <text x="88" y="211" class="pill-text">React</text>
+            <rect x="80" y="195" width="65" height="24" class="pill" />
+            <text x="88" y="211" class="pill-text">Kotlin</text>
         </g>
     </g>
 </svg>
