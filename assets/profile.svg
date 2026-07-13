@@ -1,121 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 620" width="800" height="620">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
     <defs>
-        <!-- Gradients and Styles -->
-        <linearGradient id="box-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#0c0d10" />
-            <stop offset="100%" stop-color="#141518" />
+        <!-- Gradients -->
+        <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.00" />
         </linearGradient>
+        <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#888888" />
+        </linearGradient>
+        
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;family=Inter:wght@300;400;600&amp;display=swap');
+            .title { font-family: system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 48px; fill: url(#text-grad); letter-spacing: 6px; }
+            .subtitle { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 14px; fill: #666; letter-spacing: 8px; }
             
-            .header-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 32px; fill: #ffffff; letter-spacing: 2px; }
-            .header-sub { font-family: 'JetBrains Mono', monospace; font-size: 14px; fill: #777777; letter-spacing: 3px; text-transform: uppercase; }
+            .box-title { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 14px; fill: #555; letter-spacing: 2px; }
+            .quote { font-family: system-ui, -apple-system, sans-serif; font-weight: 300; font-size: 22px; fill: #ccc; line-height: 1.6; }
+            .highlight { font-weight: 600; fill: #fff; }
             
-            .box-title { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #666666; letter-spacing: 2px; }
-            .quote-text { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; fill: #b0b0b0; line-height: 1.8; font-style: italic; }
-            .quote-highlight { font-weight: 600; fill: #ffffff; font-style: normal; }
-            .quote-accent { font-family: 'JetBrains Mono', monospace; font-size: 15px; fill: #ffffff; font-weight: 600;}
+            .card-title { font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 22px; fill: #fff; letter-spacing: 1px; }
+            .card-desc { font-family: system-ui, -apple-system, sans-serif; font-weight: 400; font-size: 15px; fill: #888; }
             
-            .project-title { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 16px; fill: #ffffff; }
-            .project-desc { font-family: 'Inter', sans-serif; font-weight: 300; font-size: 13px; fill: #888888; line-height: 1.5; }
-            .tech-pill { fill: #1a1b20; stroke: #2a2b30; stroke-width: 1; rx: 4; }
-            .tech-text { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #999999; }
+            .pill { fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.1); stroke-width: 1; rx: 6; }
+            .pill-text { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px; fill: #aaa; font-weight: 500;}
             
-            .fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
-            .delay-1 { animation-delay: 0.2s; }
-            .delay-2 { animation-delay: 0.4s; }
-            
-            @keyframes fadeIn { to { opacity: 1; } }
+            .fade-in { animation: fadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+            @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
         </style>
     </defs>
-
+    
+    <!-- Overall BG (Transparent) -->
     <rect width="100%" height="100%" fill="transparent" />
 
-    <!-- 1. HEADER SECTION (0 to 160) -->
-    <g class="fade-in">
-        <!-- Minimal abstract dots -->
-        <g opacity="0.2" fill="#ffffff">
-            <circle cx="200" cy="50" r="1" />
-            <circle cx="600" cy="80" r="1.5" />
-            <circle cx="450" cy="30" r="1" />
-            <circle cx="350" cy="110" r="1.5" />
-        </g>
-        
-        <g transform="translate(400, 80)" text-anchor="middle">
-            <text y="0" class="header-title">DEVANSH AGARWAL</text>
-            <text y="30" class="header-sub">CREATIVE DEVELOPER</text>
-            <!-- Minimal separator line -->
-            <rect x="-30" y="50" width="60" height="2" fill="#ffffff" opacity="0.2" />
-        </g>
+    <!-- Premium Abstract Background Rings -->
+    <g opacity="0.15">
+        <circle cx="150" cy="50" r="200" fill="none" stroke="#fff" stroke-width="1" stroke-dasharray="4 8" />
+        <circle cx="850" cy="0" r="300" fill="none" stroke="#fff" stroke-width="0.5" />
     </g>
 
-    <!-- 2. WHOAMI SECTION (160 to 360) -->
-    <g class="fade-in delay-1" transform="translate(0, 160)">
-        <rect x="50" y="0" width="700" height="170" rx="12" fill="url(#box-bg)" stroke="#1a1b20" stroke-width="1" />
-        <!-- Monochromatic accent line -->
-        <rect x="50" y="0" width="4" height="170" fill="#555555" rx="2" />
-        
-        <text x="90" y="120" font-family="serif" font-size="140" font-weight="bold" fill="#ffffff" opacity="0.02">"</text>
+    <!-- HEADER (0 to 200) -->
+    <g class="fade-in" transform="translate(500, 100)" text-anchor="middle">
+        <text y="0" class="title">DEVANSH AGARWAL</text>
+        <text y="45" class="subtitle">CREATIVE DEVELOPER &amp; SEC RESEARCHER</text>
+    </g>
 
-        <g transform="translate(100, 40)">
+    <!-- WHOAMI (220 to 400) -->
+    <g class="fade-in" transform="translate(50, 200)" style="animation-delay: 0.2s">
+        <!-- Glassmorphism Card -->
+        <rect width="900" height="180" rx="16" fill="url(#card-grad)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+        
+        <g transform="translate(40, 45)">
             <text class="box-title">/ WHOAMI</text>
-            
-            <g transform="translate(0, 40)" class="quote-text">
-                <text y="0">"A <tspan class="quote-highlight">10th grader</tspan> who builds full-stack apps</text>
-                <text y="28">with security baked in, and free alternatives</text>
-                <text y="56">to tools that shouldn't cost money."</text>
+            <g transform="translate(0, 45)" class="quote">
+                <text y="0">"A <tspan class="highlight">10th grader</tspan> who builds full-stack apps with security baked in,</text>
+                <text y="35">and free alternatives to tools that shouldn't cost money."</text>
             </g>
-
-            <text x="0" y="130" class="quote-accent">— I go by BGx.</text>
+            <text x="820" y="105" text-anchor="end" font-family="ui-monospace, SFMono-Regular, monospace" font-size="16" fill="#fff" font-weight="bold">— I go by BGx.</text>
         </g>
     </g>
 
-    <!-- 3. PROJECTS SECTION (360 to 620) -->
-    <g class="fade-in delay-2" transform="translate(50, 360)">
-        <text x="10" y="20" class="box-title">/ FEATURED_WORK</text>
+    <!-- PROJECTS (420 to 750) -->
+    <g class="fade-in" transform="translate(50, 430)" style="animation-delay: 0.4s">
+        <text x="10" y="0" class="box-title">/ FEATURED_WORK</text>
         
-        <!-- Grid: 3 columns. Width available: 700. Card width: 220, gap: 20 -->
+        <!-- Grid: 3 columns x 280px width, 30px gap = 900px -->
         
-        <!-- Veil Browser -->
-        <g transform="translate(0, 40)">
-            <rect width="220" height="180" rx="8" fill="url(#box-bg)" stroke="#1a1b20" />
-            <!-- Minimal Icon -->
-            <path d="M 20 30 L 40 50 M 40 30 L 20 50" stroke="#444" stroke-width="2" stroke-linecap="round" />
-            <text x="20" y="80" class="project-title">Veil Browser</text>
-            <text x="20" y="105" class="project-desc">Secure, high-performance<tspan x="20" dy="18">browser built for privacy.</tspan></text>
-            <!-- Tech Pills -->
-            <rect x="20" y="140" width="45" height="20" class="tech-pill" />
-            <text x="27" y="154" class="tech-text">Rust</text>
-            <rect x="75" y="140" width="55" height="20" class="tech-pill" />
-            <text x="82" y="154" class="tech-text">Tauri</text>
+        <!-- Card 1: Veil -->
+        <g transform="translate(0, 30)">
+            <rect width="280" height="240" rx="16" fill="url(#card-grad)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <path d="M 30 40 L 50 60 M 50 40 L 30 60" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.3" />
+            
+            <text x="30" y="110" class="card-title">Veil Browser</text>
+            <text x="30" y="145" class="card-desc">Secure, high-performance</text>
+            <text x="30" y="170" class="card-desc">browser built for privacy.</text>
+            
+            <rect x="30" y="195" width="55" height="24" class="pill" />
+            <text x="38" y="211" class="pill-text">Rust</text>
+            <rect x="95" y="195" width="65" height="24" class="pill" />
+            <text x="103" y="211" class="pill-text">Tauri</text>
         </g>
 
-        <!-- AetherDrop -->
-        <g transform="translate(240, 40)">
-            <rect width="220" height="180" rx="8" fill="url(#box-bg)" stroke="#1a1b20" />
-            <!-- Minimal Icon -->
-            <circle cx="30" cy="40" r="10" stroke="#444" stroke-width="2" fill="none" />
-            <text x="20" y="80" class="project-title">AetherDrop</text>
-            <text x="20" y="105" class="project-desc">Zero-knowledge P2P<tspan x="20" dy="18">encrypted file sharing.</tspan></text>
-            <!-- Tech Pills -->
-            <rect x="20" y="140" width="78" height="20" class="tech-pill" />
-            <text x="27" y="154" class="tech-text">WebCrypto</text>
-            <rect x="106" y="140" width="65" height="20" class="tech-pill" />
-            <text x="113" y="154" class="tech-text">Firebase</text>
+        <!-- Card 2: AetherDrop -->
+        <g transform="translate(310, 30)">
+            <rect width="280" height="240" rx="16" fill="url(#card-grad)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <circle cx="40" cy="50" r="12" stroke="#fff" stroke-width="3" fill="none" opacity="0.3" />
+            
+            <text x="30" y="110" class="card-title">AetherDrop</text>
+            <text x="30" y="145" class="card-desc">Zero-knowledge P2P</text>
+            <text x="30" y="170" class="card-desc">encrypted file sharing.</text>
+            
+            <rect x="30" y="195" width="85" height="24" class="pill" />
+            <text x="38" y="211" class="pill-text">WebCrypto</text>
+            <rect x="125" y="195" width="80" height="24" class="pill" />
+            <text x="133" y="211" class="pill-text">Firebase</text>
         </g>
 
-        <!-- ShadowLog -->
-        <g transform="translate(480, 40)">
-            <rect width="220" height="180" rx="8" fill="url(#box-bg)" stroke="#1a1b20" />
-            <!-- Minimal Icon -->
-            <rect x="20" y="30" width="20" height="20" stroke="#444" stroke-width="2" fill="none" rx="3" />
-            <text x="20" y="80" class="project-title">ShadowLog</text>
-            <text x="20" y="105" class="project-desc">Stealth security research<tspan x="20" dy="18">and logging utility.</tspan></text>
-            <!-- Tech Pills -->
-            <rect x="20" y="140" width="35" height="20" class="tech-pill" />
-            <text x="27" y="154" class="tech-text">Go</text>
-            <rect x="63" y="140" width="50" height="20" class="tech-pill" />
-            <text x="70" y="154" class="tech-text">React</text>
+        <!-- Card 3: ShadowLog -->
+        <g transform="translate(620, 30)">
+            <rect width="280" height="240" rx="16" fill="url(#card-grad)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+            <rect x="28" y="38" width="24" height="24" stroke="#fff" stroke-width="3" fill="none" rx="4" opacity="0.3" />
+            
+            <text x="30" y="110" class="card-title">ShadowLog</text>
+            <text x="30" y="145" class="card-desc">Stealth security research</text>
+            <text x="30" y="170" class="card-desc">and logging utility.</text>
+            
+            <rect x="30" y="195" width="40" height="24" class="pill" />
+            <text x="38" y="211" class="pill-text">Go</text>
+            <rect x="80" y="195" width="55" height="24" class="pill" />
+            <text x="88" y="211" class="pill-text">React</text>
         </g>
     </g>
 </svg>
