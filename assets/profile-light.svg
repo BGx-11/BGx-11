@@ -13,9 +13,6 @@
             <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
         </radialGradient>
 
-        <filter id="glass-shadow" x="-20%" y="-20%" width="140%" height="140%">
-            <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
-        </filter>
         <filter id="light-shadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.08" />
         </filter>
@@ -46,43 +43,26 @@
             .pulse-glow { animation: pulseDot 2s ease-in-out infinite; transform-origin: center; }
 
             /* Smooth Overlapping Sine Waves */
-            .wave { fill: #ffffff; }
-            .w1 { opacity: 0.02; animation: drift 20s infinite linear; }
-            .w2 { opacity: 0.04; animation: drift 25s infinite linear reverse; }
-            .w3 { opacity: 0.01; animation: drift 30s infinite linear; }
+            .wave { fill: #000000; }
+            .w1 { opacity: 0.03; animation: drift 20s infinite linear; }
+            .w2 { opacity: 0.05; animation: drift 25s infinite linear reverse; }
+            .w3 { opacity: 0.02; animation: drift 30s infinite linear; }
             
             @keyframes drift {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(-1000px); }
             }
 
-            /* --- DEFAULT: DARK MODE GRAYSCALE --- */
-            .bg { fill: #080808; }
-            .grid-pattern path { stroke: rgba(255,255,255,0.03); }
-            .title, .card-title, .highlight { fill: #ffffff; }
-            .subtitle, .quote, .box-title, .card-desc, .card-category { fill: rgba(255,255,255,0.5); }
-            .pill { fill: rgba(255,255,255,0.05); stroke: rgba(255,255,255,0.1); stroke-width: 1; rx: 6; }
-            .pill-text { fill: rgba(255,255,255,0.6); }
-            .glass-rect { fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.08); filter: url(#glass-shadow); }
-            .pulse-dot { fill: #ffffff; }
-            .pulse-glow { fill: rgba(255, 255, 255, 0.15); }
-
-            /* --- LIGHT MODE GRAYSCALE --- */
-            @media (prefers-color-scheme: light) {
-                .bg { fill: #f2f2f2; }
-                .grid-pattern path { stroke: rgba(0,0,0,0.05); }
-                .title, .card-title, .highlight { fill: #111111; }
-                .subtitle, .quote, .box-title, .card-desc, .card-category { fill: rgba(0,0,0,0.5); }
-                .pill { fill: rgba(0,0,0,0.05); stroke: rgba(0,0,0,0.1); }
-                .pill-text { fill: rgba(0,0,0,0.7); }
-                .glass-rect { fill: rgba(255,255,255,0.8); stroke: rgba(0,0,0,0.05); filter: url(#light-shadow); }
-                .pulse-dot { fill: #111111; }
-                .pulse-glow { fill: rgba(0, 0, 0, 0.15); }
-                .wave { fill: #000000; }
-                .w1 { opacity: 0.03; }
-                .w2 { opacity: 0.05; }
-                .w3 { opacity: 0.02; }
-            }
+            /* --- HARDCODED LIGHT MODE GRAYSCALE --- */
+            .bg { fill: #f2f2f2; }
+            .grid-pattern path { stroke: rgba(0,0,0,0.05); }
+            .title, .card-title, .highlight { fill: #111111; }
+            .subtitle, .quote, .box-title, .card-desc, .card-category { fill: rgba(0,0,0,0.5); }
+            .pill { fill: rgba(0,0,0,0.05); stroke: rgba(0,0,0,0.1); stroke-width: 1; rx: 6; }
+            .pill-text { fill: rgba(0,0,0,0.7); }
+            .glass-rect { fill: rgba(255,255,255,0.8); stroke: rgba(0,0,0,0.05); filter: url(#light-shadow); }
+            .pulse-dot { fill: #111111; }
+            .pulse-glow { fill: rgba(0, 0, 0, 0.15); }
         </style>
     </defs>
     
