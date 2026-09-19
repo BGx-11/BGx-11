@@ -5,14 +5,7 @@
     <img alt="Devansh Agarwal (BGx)" src="./assets/banner-dark.svg" width="100%">
   </picture>
 </a>
-
 <br/><br/>
-
-Systems developer and cybersecurity researcher based in Assam, India. I build privacy-preserving software, zero-knowledge protocols, and free alternatives to tools that shouldn't cost money.
-
-[Website](https://iambgx.in) &bull; [GitHub](https://github.com/BGx-11) &bull; [Credentials](https://iambgx.in#credentials)
-
----
 
 ### Projects
 
