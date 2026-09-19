@@ -7,8 +7,6 @@
 </a>
 <br/><br/>
 
-### Projects
-
 <a href="https://veil.iambgx.in">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/project-veil-dark.svg">
