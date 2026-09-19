@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 200" width="100%" height="100%">
+  <defs>
+    <!-- Subtle Dot Grid -->
+    <pattern id="light-dot-grid-pro" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(0, 0, 0, 0.08)" />
+    </pattern>
+
+    <!-- Radial Mask to gently fade grid to edges -->
+    <radialGradient id="radial-mask-light" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <mask id="grid-mask-l-pro">
+      <rect width="100%" height="100%" fill="url(#radial-mask-light)" />
+    </mask>
+
+    <style>
+      .mono {
+        font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', 'Fira Code', Menlo, Consolas, monospace;
+      }
+      .sans {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif;
+      }
+      @keyframes pulse-live-light {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(0.85); }
+      }
+      .dot-glow-l {
+        animation: pulse-live-light 2.4s ease-in-out infinite;
+        transform-origin: 36px 34px;
+      }
+
+      /* Responsive rules for mobile screens */
+      @media (max-width: 640px) {
+        .hide-mobile { display: none; }
+        .mobile-expand { font-size: 38px; }
+        .mobile-desc { font-size: 16px; }
+      }
+    </style>
+  </defs>
+
+  <!-- Clean Base Canvas -->
+  <rect width="960" height="200" rx="10" fill="#ffffff" stroke="rgba(0, 0, 0, 0.08)" stroke-width="1" />
+  
+  <!-- Dissolving Dot Matrix -->
+  <rect width="960" height="200" rx="10" fill="url(#light-dot-grid-pro)" mask="url(#grid-mask-l-pro)" />
+
+  <!-- Top Telemetry Header -->
+  <g class="mono" font-size="11" fill="#64748b">
+    <circle cx="36" cy="34" r="3.5" fill="#10b981" class="dot-glow-l" />
+    <text x="48" y="38" font-weight="600" fill="#0f172a">BGx</text>
+    <text x="80" y="38" fill="#94a3b8">/</text>
+    <text x="94" y="38" fill="#475569">Devansh Agarwal</text>
+    <text x="236" y="38" fill="#94a3b8">|</text>
+    <text x="250" y="38" fill="#64748b">Systems Architecture &amp; Security Research</text>
+
+    <!-- Geographic Coordinates (Hidden on narrow mobile) -->
+    <text x="924" y="38" text-anchor="end" fill="#94a3b8" class="hide-mobile">26.20&#176; N, 92.93&#176; E [UTC+5:30]</text>
+  </g>
+
+  <!-- Subtle Horizontal Divider -->
+  <line x1="36" y1="52" x2="924" y2="52" stroke="rgba(0, 0, 0, 0.06)" stroke-width="1" />
+
+  <!-- Main Hero Content -->
+  <g transform="translate(36, 110)">
+    <text x="0" y="0" class="sans mobile-expand" font-size="34" font-weight="700" fill="#0f172a" letter-spacing="-0.8">
+      Devansh Agarwal
+    </text>
+    <text x="320" y="-3" class="mono" font-size="12" font-weight="600" fill="#64748b" letter-spacing="1">
+      // BGx
+    </text>
+    <text x="0" y="30" class="sans mobile-desc" font-size="14" fill="#475569" font-weight="400">
+      Building privacy-preserving software, zero-knowledge protocols, and native systems.
+    </text>
+  </g>
+
+  <!-- Bottom Spec Chips -->
+  <g transform="translate(36, 172)" class="mono" font-size="10.5">
+    <!-- Chip 1: Rust -->
+    <rect x="0" y="-14" width="62" height="20" rx="4" fill="rgba(0, 0, 0, 0.03)" stroke="rgba(0, 0, 0, 0.07)" />
+    <text x="31" y="0" fill="#334155" text-anchor="middle" font-weight="500">RUST</text>
+
+    <!-- Chip 2: Go -->
+    <rect x="68" y="-14" width="46" height="20" rx="4" fill="rgba(0, 0, 0, 0.03)" stroke="rgba(0, 0, 0, 0.07)" />
+    <text x="91" y="0" fill="#334155" text-anchor="middle" font-weight="500">GO</text>
+
+    <!-- Chip 3: Win32 -->
+    <rect x="120" y="-14" width="66" height="20" rx="4" fill="rgba(0, 0, 0, 0.03)" stroke="rgba(0, 0, 0, 0.07)" />
+    <text x="153" y="0" fill="#334155" text-anchor="middle" font-weight="500">WIN32</text>
+
+    <!-- Chip 4: AES-256-GCM -->
+    <rect x="192" y="-14" width="94" height="20" rx="4" fill="rgba(0, 0, 0, 0.03)" stroke="rgba(0, 0, 0, 0.07)" />
+    <text x="239" y="0" fill="#334155" text-anchor="middle" font-weight="500">AES-256-GCM</text>
+
+    <!-- Chip 5: Tor SOCKS5 -->
+    <rect x="292" y="-14" width="82" height="20" rx="4" fill="rgba(0, 0, 0, 0.03)" stroke="rgba(0, 0, 0, 0.07)" class="hide-mobile" />
+    <text x="333" y="0" fill="#334155" text-anchor="middle" font-weight="500" class="hide-mobile">TOR SOCKS5</text>
+
+    <!-- Chip 6: WASM DSP -->
+    <rect x="380" y="-14" width="84" height="20" rx="4" fill="rgba(0, 0, 0, 0.03)" stroke="rgba(0, 0, 0, 0.07)" class="hide-mobile" />
+    <text x="422" y="0" fill="#334155" text-anchor="middle" font-weight="500" class="hide-mobile">WASM DSP</text>
+
+    <!-- Right link -->
+    <text x="888" y="0" text-anchor="end" font-weight="600" fill="#0f172a">iambgx.in &#8599;</text>
+  </g>
+</svg>

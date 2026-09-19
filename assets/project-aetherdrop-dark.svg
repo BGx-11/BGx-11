@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="100%" height="100%">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect width="460" height="120" rx="8" fill="#0d0d0d" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+  
+  <g class="mono" font-size="10" fill="#71717a">
+    <text x="24" y="28">02 // P2P PROTOCOL</text>
+    <text x="436" y="28" text-anchor="end" fill="#f4f4f5" font-weight="600">&#8599;</text>
+  </g>
+
+  <g transform="translate(24, 58)">
+    <text x="0" y="0" class="sans" font-size="20" font-weight="700" fill="#ffffff">AetherDrop</text>
+    <rect x="120" y="-14" width="112" height="18" rx="3" fill="rgba(255, 255, 255, 0.05)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="176" y="-1" class="mono" font-size="9" fill="#a1a1aa" text-anchor="middle">ZERO-KNOWLEDGE</text>
+  </g>
+
+  <text x="24" y="80" class="sans" font-size="12" fill="#a1a1aa">Client-side AES-256-GCM encrypted transfer with ephemeral burn.</text>
+
+  <g class="mono" font-size="9.5" fill="#71717a">
+    <text x="24" y="104">NEXT.JS &#8226; WEB-CRYPTO &#8226; AES-GCM &#8226; P2P</text>
+  </g>
+</svg>
